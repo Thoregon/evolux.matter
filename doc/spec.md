@@ -1,7 +1,9 @@
 matter
 ======
 
-universe plugin to handle persistent data & collections
+UHandle persistent data & collections.
+
+Implements building snapshots and implementing the queries from CQRS (Command Query Responsibility Seggregation)
 
 * countable collections: can determine their size
 * infinite collections: size is unknown
