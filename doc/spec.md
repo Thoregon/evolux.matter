@@ -35,10 +35,13 @@ Value objects are no singletons! The identity check may fail!
 
 - Metadata
     * schema, ....
+        * indices for faster queries
     * provides validity checks
     * provides commands/actions
     * provides combining rules
     * provides view categories
+    * mixins with calculated properties
+   
     
 - Statusdata
     * synchronized
