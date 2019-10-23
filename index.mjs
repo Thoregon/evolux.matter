@@ -4,7 +4,7 @@
 
 export { default as Matter }        from './lib/matter.mjs';
 
-export default {
+export const service = {
     install() {
         console.log('** matter install()');
     },
