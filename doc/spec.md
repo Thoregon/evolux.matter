@@ -29,7 +29,23 @@ Value objects are no singletons! The identity check may fail!
 ##Query API's
 - XPath
 - fluent API
+    - from(collection)
+    - select(entity)
+    - query language
+    - then() 
+    - observe()
+    - provide an array with the current content (window/view): target() / mirror() / map() / delegate() / surrogate() / projection()
+    - Interactive features
+        - filter(InteractiveFilter)
+        - (display) window size
+        - prev() and next()
+- JSON (simmilar to mongoDB)
+    - find({});
 - (SQL derivate will follow)
+
+- group/aggregate queries
+
+- proxy for each items
 
 ##Entity
 
