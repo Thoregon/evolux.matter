@@ -3,11 +3,11 @@
  */
 import Matter from "./lib/matter.mjs";
 
-const myuniverse = (() => {
+const myuniverse = () => {
     // this is a cryptic way to get the 'global' object or 'window' in strict mode. direct code references will throw an error
     const space = (1,eval)("this");
     return space.universe ? space.universe : space;
-})();
+};
 
 //**** now define all standard exports
 
@@ -16,12 +16,12 @@ export { default as Matter }        from './lib/matter.mjs';
 export const service = {
     install() {
         console.log('** matter install()');
-        myuniverse.matter = new Matter();
+        myuniverse().matter = new Matter();
     },
 
     uninstall() {
         console.log('** matter uninstall()');
-        delete myuniverse.matter;
+        delete myuniverse().matter;
     },
 
     resolve() {
@@ -31,12 +31,12 @@ export const service = {
 
     start() {
         console.log('** matter start()');
-        myuniverse.matter.condense();
+        myuniverse().matter.condense();
     },
 
     stop() {
         console.log('** matter stop()');
-        myuniverse.matter.freeze();
+        myuniverse().matter.freeze();
     },
 
     update() {
