@@ -36,8 +36,5 @@ export const service = {
 
     update() {
         console.log('** matter update()');
-        this.stop();
-        this.uninstall();
-        this.install();
     }
 };
