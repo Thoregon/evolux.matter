@@ -18,11 +18,13 @@ Allow endpoints to defined their context, to cache and store data which always n
 E.g. mobile device from salesmen stores customer data the salesmen is responsible for and article data his customers
 normaly orders, but may store all article data when the salesman often is offline. 
 Data that is not stored locally can still be retrieved at any time. The most recent snapshot is loaded, events not yet 
-applied are applied and chached locally.
+applied are applied and cached locally.
 
 ##Identifiers
 
 Except value objects, each instance automatically will receive an identifier (key) which will be stored in the property '_id';
+Those id's will be provided by the persistence layer and applied with a successful transaction. The provided in-memory 
+'persitance' will also apply unique id's.   
 
 Value objects are no singletons! The identity check may fail!  
 
