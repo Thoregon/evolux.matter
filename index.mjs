@@ -8,6 +8,10 @@ import { myevolux }     from '/evolux.universe';
 
 export { default as Matter }        from './lib/matter.mjs';
 
+export { default as CreateCollection }  from './lib/commands/createcollection.mjs';
+export { default as DropCollection }    from './lib/commands/dropcollection.mjs';
+export { default as RenameCollection }  from './lib/commands/renamecollection.mjs';
+
 export const service = {
     install() {
         console.log('** matter install()');

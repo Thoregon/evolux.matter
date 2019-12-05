@@ -44,29 +44,33 @@ Value objects are no singletons! The identity check may fail!
 - JSON (simmilar to mongoDB)
     - find({});
 - (SQL derivate will follow)
-
 - group/aggregate queries
-
 - proxy for each items
+- support [iterator protocol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)
 
 ##Entity
 
 - Metadata
-    * schema, ....
-        * indices for faster queries
-    * provides validity checks
-    * provides commands/actions
-    * provides combining rules
-    * provides view categories
-    * mixins with calculated properties
+    - schema, ....
+        - indices for faster queries
+    - provides validity checks
+    - provides commands/actions
+    - provides combining rules
+    - provides view categories
+    - mixins with calculated properties
    
     
 - Statusdata
-    * synchronized
-    * all kind of timestamps, created, modified, deleted, synchronized
-        * extendable e.g. todo/open, inprogress/edit, processed/done, discarded/canceled, resumed/reopened/continued, archived 
-    * provides valid commands/actions
-        * statemachine
+    - synchronized
+    - all kind of timestamps, created, modified, deleted, synchronized
+        - extendable e.g. todo/open, inprogress/edit, processed/done, discarded/canceled, resumed/reopened/continued, archived 
+    - provides valid commands/actions
+        - statemachine
 
 - Transactions
-    * 
+    - 
+
+##Remote data
+Not all data should/need/must be replicated locally. Queries will be executed from other peers, those who can supply the 
+result. Remote query results will be kept synchronized, but are 'weak' referenced, means they will not be stored locally
+and discarded after use.
