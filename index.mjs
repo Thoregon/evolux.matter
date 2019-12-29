@@ -6,7 +6,7 @@ import { myevolux }     from '/evolux.universe';
 
 //**** now define all standard exports
 
-export { default as Matter }        from './lib/matter.mjs';
+export { default as Matter }            from './lib/matter.mjs';
 
 export { default as CreateCollection }  from './lib/commands/createcollection.mjs';
 export { default as DropCollection }    from './lib/commands/dropcollection.mjs';

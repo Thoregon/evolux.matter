@@ -69,6 +69,21 @@ Value objects are no singletons! The identity check may fail!
 
 - Transactions
     - 
+    
+````js
+const tx = txMonitor.create()
+    .addStore('store').rw
+    .with('table')
+    .with('anotherTable');
+
+try {
+    const result = await tx.do(tx => { });
+    ...
+} catch(err) {
+    ...
+}
+
+````
 
 ##Remote data
 Not all data should/need/must be replicated locally. Queries will be executed from other peers, those who can supply the 
