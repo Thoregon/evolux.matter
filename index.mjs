@@ -2,7 +2,7 @@
  *
  */
 import Matter                           from "./lib/matter.mjs";
-import { myuniverse, myevolux }         from '/evolux.universe';
+import { myuniverse, tservices }         from '/evolux.universe';
 
 //**** now define all standard exports
 
@@ -15,12 +15,12 @@ export { default as RenameCollection }  from './lib/commands/renamecollection.mj
 export const service = {
     install() {
         myuniverse().logger.debug('** matter install()');
-        myevolux().matter = new Matter();
+        tservices().matter = new Matter();
     },
 
     uninstall() {
         myuniverse().logger.debug('** matter uninstall()');
-        delete myevolux().matter;
+        delete tservices().matter;
     },
 
     resolve() {
@@ -30,12 +30,12 @@ export const service = {
 
     start() {
         myuniverse().logger.debug('** matter start()');
-        myevolux().matter.condense();
+        tservices().matter.condense();
     },
 
     stop() {
         myuniverse().logger.debug('** matter stop()');
-        myevolux().matter.freeze();
+        tservices().matter.freeze();
     },
 
     update() {
