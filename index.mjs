@@ -30,14 +30,14 @@ export const service = {
         // nothing to do
     },
 
-    start() {
+    async start() {
         myuniverse().logger.debug('** matter start()');
-        tservices().matter.condense();
+        await tservices().matter.condense();
     },
 
-    stop() {
+    async stop() {
         myuniverse().logger.debug('** matter stop()');
-        tservices().matter.freeze();
+        await tservices().matter.freeze();
     },
 
     update() {
