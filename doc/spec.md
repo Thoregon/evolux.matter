@@ -28,6 +28,16 @@ Those id's will be provided by the persistence layer and applied with a successf
 
 Value objects are no singletons! The identity check may fail!  
 
+## Substores
+Additional to a global store there is a need for restricted stores
+
+### Responsibilities
+
+### Users Private Store
+
+### Device Local Store
+
+
 ##Query API's
 - XPath
 - fluent API
