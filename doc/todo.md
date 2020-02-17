@@ -1,6 +1,16 @@
 ToDo
 ====
 
+- Tools
+    - clear commands
+    - list commands
+    - list done commands
+
+- collection
+    - propagate to mirrors
+        - coll.clear 
+        - delete matter.coll 
+
 Usage
 
 Set an Object:
