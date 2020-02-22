@@ -1,8 +1,10 @@
 /**
  *
  */
-import Matter                           from "./lib/matter.mjs";
+import Matter                           from './lib/matter.mjs';
 import { myuniverse, tservices }        from '/evolux.universe';
+
+export *                                from './lib/util.mjs';
 
 //**** now define all standard exports
 
