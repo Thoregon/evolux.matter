@@ -22,8 +22,7 @@
     "url": "https://github.com/Thoregon/evolux.matter/issues"
   },
   "homepage": "https://github.com/Thoregon/evolux.matter#readme",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
     "cuid": "^2.1.6"
   }
