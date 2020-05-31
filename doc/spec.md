@@ -38,7 +38,7 @@ Additional to a global store there is a need for restricted stores
 ### Device Local Store
 
 
-##Query API's
+## Query API's
 - XPath
 - fluent API
     - from(collection)
@@ -58,7 +58,7 @@ Additional to a global store there is a need for restricted stores
 - proxy for each items
 - support [iterator protocol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)
 
-##Entity
+## Entity
 
 - Metadata
     - schema, ....
@@ -79,7 +79,35 @@ Additional to a global store there is a need for restricted stores
 
 - Transactions
     
-##Remote data
+## Remote data
 Not all data should/need/must be replicated locally. Queries will be executed from other peers, those who can supply the 
 result. Remote query results will be kept synchronized, but are 'weak' referenced, means they will not be stored locally
 and discarded after use.
+
+## Usage
+
+Set an Object:
+
+    await matter.anchor.set(obj)
+    matter.anchor = obj;
+    
+Add an Object to a collection
+
+    await matter.collection.add(obj);
+
+Object/Collection exists
+
+    let exists = await matter.anchor.has('a.b.c.');
+    
+Get an Object/Collection. This objects are immutable. Can only be modified with the 'set()' API.
+Returns bare object without proxy. Referenced objects has to be dereferenced with the matter API as well!
+
+    let obj = await matter.anchor.val;
+    
+
+Matter management 
+
+    const Matter = universe.Matter
+    Matter.is(obj)      // check if the object is persistent
+    Matter.soul(obj)    // get the UID of the object
+    
