@@ -2,7 +2,7 @@
  *
  */
 import Matter                           from './lib/matter.mjs';
-import { myuniverse, tservices }        from '/evolux.universe';
+import { tservices }                    from '/evolux.universe';
 
 export *                                from './lib/util.mjs';
 export *                                from './lib/ubiqutious.mjs';
@@ -19,31 +19,31 @@ export { default as RenameCollection }  from './lib/actions/renamecollection.mjs
 
 export const service = {
     install() {
-        myuniverse().logger.debug('** matter install()');
+        universe.logger.debug('** matter install()');
         tservices().matter = new Matter();
     },
 
     uninstall() {
-        myuniverse().logger.debug('** matter uninstall()');
+        universe.logger.debug('** matter uninstall()');
         delete tservices().matter;
     },
 
     resolve() {
-        myuniverse().logger.debug('** matter resolve()');
+        universe.logger.debug('** matter resolve()');
         // nothing to do
     },
 
     async start() {
-        myuniverse().logger.debug('** matter start()');
+        universe.logger.debug('** matter start()');
         await tservices().matter.condense();
     },
 
     async stop() {
-        myuniverse().logger.debug('** matter stop()');
+        universe.logger.debug('** matter stop()');
         await tservices().matter.freeze();
     },
 
     update() {
-        myuniverse().logger.debug('** matter update()');
+        universe.logger.debug('** matter update()');
     }
 };
