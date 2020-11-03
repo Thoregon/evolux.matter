@@ -20,6 +20,17 @@ normaly orders, but may store all article data when the salesman often is offlin
 Data that is not stored locally can still be retrieved at any time. The most recent snapshot is loaded, events not yet 
 applied are applied and cached locally.
 
+IPFS content
+- silo
+- depot
+- trove, shelf (, stash)
+
+Blockchain content
+- tx
+- contract, agreement, treaty
+    - pledge, record, arrangemnt, pact
+
+
 ##Identifiers
 
 Except value objects, each instance automatically will receive an identifier (key) which will be stored in the property '_id';
