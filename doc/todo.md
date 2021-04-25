@@ -6,13 +6,11 @@ ToDo
     - list commands
     - list done commands
 
-- collection
-    - propagate to mirrors
-        - coll.clear 
-        - delete matter.coll 
-
 - DB SPI/API
+    - port communication (postMessage)
 
+- stat (analogous to 'fs.Stats' )
+    - entity class: reference to repo entry
 
 - Tags:
 
