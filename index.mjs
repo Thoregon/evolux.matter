@@ -4,8 +4,8 @@
 import Matter                           from './lib/matter.mjs';
 import { tservices }                    from '/evolux.universe';
 
-export *                                from './lib/util.mjs';
-export *                                from './lib/ubiqutious.mjs';
+// export *                                from './lib/util.mjs';
+// export *                                from './lib/ubiqutious.mjs';
 
 //**** now define all standard exports
 
